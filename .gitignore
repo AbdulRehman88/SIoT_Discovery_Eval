@@ -1,0 +1,39 @@
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Project data & outputs (don’t version large files) ---
+data/
+results/
+logs/
+**/traces/
+
+# --- Large/binary/artifacts ---
+*.gpickle
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.bz2
+*.log
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.tsv
+
+# --- Keep tiny docs if you add them later ---
+!data/README.md
+!results/README.md
+
+# --- Keep config ---
+!config.yaml

@@ -1,0 +1,49 @@
+base_dir: "D:/Dr_Abdul_Rehman/MyPycharm/August 02 2025/SIoT_Discovery_Eval"
+
+data_paths:
+  raw_dir: "data"
+  processed_dir: "data/processed"
+
+datasets:
+  EIES:
+    file: "EIES/EIES.paj"
+    format: "pajek"
+    directed: false
+    has_weight: false
+
+
+  FB_Forum:
+    file: "FB_Forum/fb-forum.edges"
+    format: "edgelist"
+    directed: false
+    has_weight: false
+
+  Epinions:
+    file: "Epinions/soc-epinions-trust-dir.edges"
+    format: "edgelist_custom"
+    directed: true
+    has_weight: false
+    skip_header: false
+    delimiter: " "
+
+  Caenorhabditis:
+    file: "Caenorhabditis/dimacs10-celegansneural/out.dimacs10-celegansneural"
+    format: "weighted_edgelist_csv"
+    directed: false
+    has_weight: true
+    skip_header: false
+    delimiter: "\t"
+
+  BitcoinAlpha:
+    file: "BTCAlphaNet.csv"
+    format: "weighted_edgelist_csv"
+    directed: true
+    has_weight: true
+    delimiter: ","
+
+service_classes:
+  - A
+  - B
+  - C
+
+trust_threshold_alpha: 0.6
