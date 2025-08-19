@@ -1,62 +1,52 @@
-\# SIoT\_Discovery\_Eval
+# SIoT_Discovery_Eval
 
+This repository provides the complete implementation of the Class-based Greedy Discovery algorithm proposed in our work *“Trust- and Class-Aware Service Discovery with Dual Control in the Social Internet of Things.”*
 
+It includes all source code, configuration files, and evaluation scripts required to reproduce our experimental results. The code processes several publicly available real-world graph datasets, executes service discovery experiments (greedy discovery with and without fallback), and generates figures and logs.
 
-Reproducible evaluation code for Social Internet of Things (SIoT) \*\*service discovery\*\* experiments.  
+---
 
-It preprocesses several real-world graphs, runs discovery strategies (e.g., greedy with/without fallback), and generates publication-ready plots.
+## Project Structure
+- `src/` — algorithm implementations, preprocessing, and evaluation scripts  
+- `config.yaml` — main configuration file controlling experiment parameters  
+- `data/` — raw input datasets (not included due to licensing)  
+- `data/processed/` — cached NetworkX graphs (`.gpickle`, generated automatically)  
+- `results/` — plots, traces, and summary CSVs (ignored in Git)  
+- `requirements.txt` — Python dependencies  
+- `.gitignore` — specifies ignored files and folders  
 
+---
 
+## Datasets
+This project relies on publicly available datasets:
 
-\## Project Structure (key parts)
+- EIES (electronic mail interactions)  
+- Epinions trust network  
+- FB Forum message interactions  
+- Bitcoin Alpha (BTC-Alpha) trust/ratings network  
+- Caenorhabditis (C. elegans) neural network  
 
-\- `src/` — all code
+The datasets are not redistributed here due to licensing.  
+Download them from the Stanford SNAP Repository (https://snap.stanford.edu/data/) and the Network Repository (http://networkrepository.com/).  
+After downloading, place them under `data/` using the following subfolder structure:
 
-\- `config.yaml` — main configuration
+- `data/EIES/`  
+- `data/Epinions/`  
+- `data/FB_Forum/`  
+- `data/BTCAlpha/`  
+- `data/Caenorhabditis/`  
 
-\- `data/` — raw inputs (ignored by Git; add your datasets here)
+Preprocessing scripts (e.g., `src/process_all_datasets.py`) will generate `.gpickle` graphs in `data/processed/`.
 
-\- `data/processed/` — cached NetworkX graphs (`.gpickle`, ignored)
+---
 
-\- `results/` — figures, traces, CSVs (ignored)
+## Environment Setup
+Python 3.10 or later is recommended.  
 
-\- `requirements.txt` — Python dependencies
-
-\- `.gitignore` — ignores data/results/venv/artifacts
-
-
-
-\## Datasets (place under `data/`)
-
-\- \*\*EIES\*\* (electronic mail interactions)
-
-\- \*\*Epinions\*\* trust network
-
-\- \*\*FB\_Forum\*\* message interactions
-
-\- \*\*Bitcoin Alpha (BTC-Alpha)\*\* trust/ratings
-
-\- \*\*Caenorhabditis (C. elegans) neural\*\* network
-
-
-
-Keep the same subfolder names you used locally (e.g., `data/EIES`, `data/Epinions`, etc.).
-
-
-
-\## Environment Setup
-
-\- Python 3.10+ recommended
-
+Create and activate a virtual environment:
 ```bash
-
 python -m venv .venv
-
-\# Windows
-
-.venv\\\\Scripts\\\\activate
-
-pip install -r requirements.txt
-
-
-
+# Windows
+.venv\Scripts\activate
+# Linux/macOS
+source .venv/bin/activate
