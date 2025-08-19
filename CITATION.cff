@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "SIoT_Discovery_Eval: Trust- and Class-Aware Service Discovery with Dual Control in the Social Internet of Things"
+authors:
+  - family-names: Rehman
+    given-names: Abdul
+version: "1.0.0"
+date-released: "2025-08-19"
+repository-code: "https://github.com/AbdulRehman88/SIoT_Discovery_Eval"
+preferred-citation:
+  type: article
+  title: "Trust- and Class-Aware Service Discovery with Dual Control in the Social Internet of Things"
+  authors:
+    - family-names: Rehman
+      given-names: Abdul
+  journal: "Scientific Report"
+  year: 2025
